@@ -1,102 +1,127 @@
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      rel="stylesheet"
-    />
-    <!-- Import Google Font Shantell Sans -->
-    <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-      body {
-        font-family: 'Shantell Sans', sans-serif;
-        scroll-behavior: smooth; /* Thêm hiệu ứng cuộn mượt mà */
-      }
-    </style>
-  </head>
-  <body class="bg-gray-200">
-    <!-- Header Section -->
-    <header class="bg-black text-white p-4 sticky top-0 z-50">
-      <nav class="container mx-auto flex justify-between">
-        <a href="#personal-info" class="hover:underline">Information</a>
-        <a href="#skills" class="hover:underline">Skills</a>
-        <a href="#work-experience" class="hover:underline">Experience</a>
-      </nav>
-    </header>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    rel="stylesheet"
+  />
+  <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Shantell Sans', sans-serif;
+    }
 
-    <div class="container mx-auto p-4 mt-8">
-      <!-- Portfolio Header -->
-      <div class="text-center mb-8">
-        <div
-          class="inline-block bg-gray-300 px-6 py-4 rounded-lg shadow-md w-full md:w-[25rem]"
-        >
-          <i class="fas fa-user-circle text-2xl md:text-3xl"></i>
-          <span class="text-3xl md:text-4xl font-bold ml-2">PORTFOLIO</span>
+    html {
+      scroll-behavior: smooth; /* Thêm hiệu ứng cuộn mượt mà */
+    }
+
+    /* Nếu muốn tùy chỉnh thêm */
+    section {
+      scroll-margin-top: 80px; /* Thêm khoảng cách trên mỗi section */
+    }
+  </style>
+</head>
+<body class="bg-gray-200">
+  <!-- Header Section -->
+  <header class="bg-black text-white p-4 sticky top-0 z-50">
+    <nav class="container mx-auto flex justify-between">
+      <a href="#personal-info" class="hover:underline">Information</a>
+      <a href="#skills" class="hover:underline">Skills</a>
+      <a href="#work-experience" class="hover:underline">Experience</a>
+      <a href="#customer" class="hover:underline">Customers</a>
+    </nav>
+  </header>
+
+  <div class="container mx-auto p-4 mt-8">
+    <!-- Portfolio Header -->
+    <div class="text-center mb-8">
+      <div
+        class="inline-block bg-gray-300 px-6 py-4 rounded-lg shadow-md w-full md:w-[25rem]"
+      >
+        <i class="fas fa-user-circle text-2xl md:text-3xl"></i>
+        <span class="text-3xl md:text-4xl font-bold ml-2">PORTFOLIO</span>
+      </div>
+    </div>
+
+    <!-- Personal Information Section -->
+    <section id="personal-info" class="mb-8">
+      <div class="bg-white p-6 md:p-8 rounded-lg shadow-lg flex flex-col items-center justify-center">
+        <!-- Name Section -->
+        <div class="text-center mb-8">
+          <div
+            class="bg-blue-400 px-8 md:px-12 py-4 md:py-6 rounded-lg w-full md:w-auto flex justify-center items-center"
+          >
+            <span class="text-xl md:text-2xl font-bold text-black">PHAM THI HAI YEN</span>
+          </div>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="flex flex-col md:flex-row justify-center items-center mb-8">
+          <div class="bg-pink-300 p-6 rounded-lg shadow-lg w-full md:w-auto mb-4 md:mb-0">
+            <h2 class="text-xl md:text-2xl font-bold mb-4">Contact Information</h2>
+            <div class="flex items-center mb-2">
+              <img class="mr-2 w-6 h-6 md:w-8 md:h-8" src="https://img.icons8.com/?size=100&id=F2jfyzNiq6za&format=png&color=000000" />
+              <span class="text-lg md:text-xl">(+84) 386 867 372</span>
+            </div>
+            <div class="flex items-center mb-2">
+              <img class="mr-2 w-6 h-6 md:w-8 md:h-8" src="https://img.icons8.com/?size=100&id=37246&format=png&color=000000" />
+              <span class="text-lg md:text-xl">phamthihaiyen@gmail.com</span>
+            </div>
+            <div class="flex items-center">
+              <img class="mr-2 w-6 h-6 md:w-8 md:h-8" src="https://img.icons8.com/?size=100&id=13930&format=png&color=000000" />
+              <span class="text-lg md:text-xl">HaiYenPham</span>
+            </div>
+          </div>
+
+          <div class="md:ml-8 relative mt-4 md:mt-0">
+            <img
+              alt="Portrait"
+              class="rounded-full w-[10rem] h-[10rem] md:w-[20rem] md:h-[20rem] object-cover mx-auto"
+              src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728358705/IMG_8161_rexdmp.jpg"
+            />
+            <div class="absolute bottom-0 right-0 bg-yellow-400 px-2 py-1 rounded-lg text-xs md:text-base">
+              <span>It's me!</span>
+            </div>
+          </div>
         </div>
       </div>
+    </section>
 
-      <!-- Personal Information Section -->
-      <section id="personal-info" class="mb-8">
-        <div class="bg-white p-6 md:p-8 rounded-lg shadow-lg flex flex-col items-center justify-center">
-          <!-- Name Section -->
-          <div class="text-center mb-8">
-            <div
-              class="bg-blue-400 px-8 md:px-12 py-4 md:py-6 rounded-lg w-full md:w-auto flex justify-center items-center"
-            >
-              <span class="text-xl md:text-2xl font-bold text-black">PHAM THI HAI YEN</span>
-            </div>
-          </div>
+    <!-- Skills Section -->
+    <section id="skills" class="mb-8">
+      <div class="bg-white p-6 md:p-8 rounded-lg shadow-lg">
+        <h2 class="text-xl md:text-2xl font-bold mb-4">Skills</h2>
+        <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728743776/napkin-selection_3_vwawkm.png" alt="Skills" class="w-full h-auto rounded-lg" />
+      </div>
+    </section>
 
-          <!-- Contact Information -->
-          <div class="flex flex-col md:flex-row justify-center items-center mb-8">
-            <div class="bg-pink-300 p-6 rounded-lg shadow-lg w-full md:w-auto mb-4 md:mb-0">
-              <h2 class="text-xl md:text-2xl font-bold mb-4">Contact Information</h2>
-              <div class="flex items-center mb-2">
-                <img class="mr-2 w-6 h-6 md:w-8 md:h-8" src="https://img.icons8.com/?size=100&id=F2jfyzNiq6za&format=png&color=000000" />
-                <span class="text-lg md:text-xl">(+84) 386 867 372</span>
-              </div>
-              <div class="flex items-center mb-2">
-                <img class="mr-2 w-6 h-6 md:w-8 md:h-8" src="https://img.icons8.com/?size=100&id=37246&format=png&color=000000" />
-                <span class="text-lg md:text-xl">phamthihaiyen@gmail.com</span>
-              </div>
-              <div class="flex items-center">
-                <img class="mr-2 w-6 h-6 md:w-8 md:h-8" src="https://img.icons8.com/?size=100&id=13930&format=png&color=000000" />
-                <span class="text-lg md:text-xl">HaiYenPham</span>
-              </div>
-            </div>
+    <!-- Work Experience Section -->
+    <section id="work-experience">
+      <div class="bg-white p-6 md:p-8 rounded-lg shadow-lg">
+        <h2 class="text-xl md:text-2xl font-bold mb-4">Work Experience</h2>
+        <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728743754/napkin-selection_2_xyql0b.png" alt="Work Experience" class="w-full h-auto rounded-lg" />
+      </div>
+    </section>
 
-            <div class="md:ml-8 relative mt-4 md:mt-0">
-              <img
-                alt="Portrait"
-                class="rounded-full w-[10rem] h-[10rem] md:w-[20rem] md:h-[20rem] object-cover mx-auto"
-                src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728358705/IMG_8161_rexdmp.jpg"
-              />
-              <div class="absolute bottom-0 right-0 bg-yellow-400 px-2 py-1 rounded-lg text-xs md:text-base">
-                <span>It's me!</span>
-              </div>
-            </div>
-          </div>
+    <!-- Customer Section -->
+    <section id="customer" class="mb-8">
+      <div class="bg-white p-6 md:p-8 rounded-lg shadow-lg">
+        <h2 class="text-xl md:text-2xl font-bold mb-4 text-center">Clients</h2>
+        <div class="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-6">
+          <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728743877/z5923749441967_e6578208182cdf366f506e5f186d8f90_v4kdmi.jpg" alt="Customer Logo" class="w-full h-auto object-contain" />
+          <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728743877/z5923749441983_795f57d4ee8d8d3f97b2f1aee9db3dbc_huc24u.jpg" alt="Customer Logo" class="w-full h-auto object-contain" />
+          <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728743895/z5923749442042_1ccbb4457e7a57e47ef6d08cf5b544c6_teecfz.jpg" alt="Customer Logo" class="w-full h-auto object-contain" />
+          <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728743893/z5923749442021_92159a02991d97d683d13846de3ad265_nzht47.jpg" alt="Customer Logo" class="w-full h-auto object-contain" />
+          <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/t_D/v1728743895/z5923749442025_41c81618626b2cc8512680103424282c_ukvshl.jpg" alt="Customer Logo" class="w-full h-auto object-fit" />
+          <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728743894/z5923749442024_3b731d55df630a14c3ce3b770ce0b68e_jcj4ex.jpg" alt="Customer Logo" class="w-[100px] h-[100px] object-contain" />
+
         </div>
-      </section>
-
-      <!-- Skills Section -->
-      <section id="skills" class="mb-8">
-        <div class="bg-white p-6 md:p-8 rounded-lg shadow-lg">
-          <h2 class="text-xl md:text-2xl font-bold mb-4">Skills</h2>
-          <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728740845/napkin-selection_n0heq3.png" alt="Skills" class="w-full h-auto rounded-lg" />
-        </div>
-      </section>
-
-      <!-- Work Experience Section -->
-      <section id="work-experience">
-        <div class="bg-white p-6 md:p-8 rounded-lg shadow-lg">
-          <h2 class="text-xl md:text-2xl font-bold mb-4">Work Experience</h2>
-          <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728741386/napkin-selection_1_k7mctr.png" alt="Work Experience" class="w-full h-auto rounded-lg" />
-        </div>
-      </section>
-    </div>
-  </body>
+      </div>
+    </section>
+    
+  </div>
+</body>
 </html>
