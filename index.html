@@ -23,6 +23,37 @@
       scroll-margin-top: 80px; /* Thêm khoảng cách trên mỗi section */
     }
   </style>
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper/swiper-bundle.min.css"
+  />
+  <style>
+    /* Tuỳ chỉnh thêm cho slider */
+    .swiper-slide img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    /* Thêm vào phần style */
+.swiper {
+  width: 100%;
+  height: 300px; /* Thay đổi chiều cao tùy ý */
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+  </style>
 </head>
 <body class="bg-gray-200">
   <!-- Header Section -->
@@ -94,7 +125,7 @@
     <section id="skills" class="mb-8">
       <div class="bg-white p-6 md:p-8 rounded-lg shadow-lg">
         <h2 class="text-xl md:text-2xl font-bold mb-4">Skills</h2>
-        <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728743776/napkin-selection_3_vwawkm.png" alt="Skills" class="w-full h-auto rounded-lg" />
+        <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728916385/napkin-selection_6_ofkayz.png" alt="Skills" class="w-full h-auto rounded-lg" />
       </div>
     </section>
 
@@ -102,25 +133,123 @@
     <section id="work-experience">
       <div class="bg-white p-6 md:p-8 rounded-lg shadow-lg">
         <h2 class="text-xl md:text-2xl font-bold mb-4">Work Experience</h2>
-        <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728743754/napkin-selection_2_xyql0b.png" alt="Work Experience" class="w-full h-auto rounded-lg" />
+        <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728916274/napkin-selection_5_ilwxgr.png" alt="Work Experience" class="w-full h-auto rounded-lg" />
       </div>
     </section>
 
-    <!-- Customer Section -->
-    <section id="customer" class="mb-8">
-      <div class="bg-white p-6 md:p-8 rounded-lg shadow-lg">
-        <h2 class="text-xl md:text-2xl font-bold mb-4 text-center">Clients</h2>
-        <div class="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-6">
-          <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728743877/z5923749441967_e6578208182cdf366f506e5f186d8f90_v4kdmi.jpg" alt="Customer Logo" class="w-full h-auto object-contain" />
-          <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728743877/z5923749441983_795f57d4ee8d8d3f97b2f1aee9db3dbc_huc24u.jpg" alt="Customer Logo" class="w-full h-auto object-contain" />
-          <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728743895/z5923749442042_1ccbb4457e7a57e47ef6d08cf5b544c6_teecfz.jpg" alt="Customer Logo" class="w-full h-auto object-contain" />
-          <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728743893/z5923749442021_92159a02991d97d683d13846de3ad265_nzht47.jpg" alt="Customer Logo" class="w-full h-auto object-contain" />
-          <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/t_D/v1728743895/z5923749442025_41c81618626b2cc8512680103424282c_ukvshl.jpg" alt="Customer Logo" class="w-full h-auto object-fit" />
-          <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728743894/z5923749442024_3b731d55df630a14c3ce3b770ce0b68e_jcj4ex.jpg" alt="Customer Logo" class="w-[100px] h-[100px] object-contain" />
+<section id="customer" class="mb-8">
+  <div class="bg-white p-6 md:p-8 rounded-lg shadow-lg">
+    <h2 class="text-xl md:text-2xl font-bold mb-4 text-center">Clients</h2> 
+    
+    <!-- 3 logo lớn căn giữa, đều nhau trên 1 dòng, responsive cho mobile -->
+    <div class="flex justify-center items-center flex-wrap gap-4 mb-8">
+      <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728743877/z5923749441967_e6578208182cdf366f506e5f186d8f90_v4kdmi.jpg" alt="Customer Logo" class="w-[120px] sm:w-[150px] md:w-[200px] lg:w-[250px] h-auto object-contain" />
+      <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728743877/z5923749441983_795f57d4ee8d8d3f97b2f1aee9db3dbc_huc24u.jpg" alt="Customer Logo" class="w-[120px] sm:w-[150px] md:w-[200px] lg:w-[250px] h-auto object-contain" />
+      <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728916260/z5930149580142_1b1fe853da9a4149828b6be8ac8d32df_gqxbwr.jpg" alt="Customer Logo" class="w-[120px] sm:w-[150px] md:w-[200px] lg:w-[250px] h-auto object-contain" />
+    </div>
+    
+    <!-- 4 logo nhỏ hơn trên 1 dòng, responsive -->
+    <div class="flex justify-between items-center flex-wrap gap-4">
+      <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728743895/z5923749442042_1ccbb4457e7a57e47ef6d08cf5b544c6_teecfz.jpg" alt="Customer Logo" class="w-[80px] sm:w-[100px] md:w-[120px] lg:w-[150px] h-auto object-contain" />
+      <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728743893/z5923749442021_92159a02991d97d683d13846de3ad265_nzht47.jpg" alt="Customer Logo" class="w-[80px] sm:w-[100px] md:w-[120px] lg:w-[150px] h-auto object-contain" />
+      <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/t_D/v1728743895/z5923749442025_41c81618626b2cc8512680103424282c_ukvshl.jpg" alt="Customer Logo" class="w-[80px] sm:w-[100px] md:w-[120px] lg:w-[150px] h-auto object-contain" />
+      <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728743894/z5923749442024_3b731d55df630a14c3ce3b770ce0b68e_jcj4ex.jpg" alt="Customer Logo" class="w-[80px] sm:w-[100px] md:w-[120px] lg:w-[150px] h-auto object-contain" />
+    </div>
+  </div>
+</section>
 
+
+
+<section id="photo-slider" class="mb-8">
+  <div class="bg-white p-6 md:p-8 rounded-lg shadow-lg">
+    <h2 class="text-xl md:text-2xl font-bold mb-4 text-center">Photo Slider</h2> 
+
+    <!-- Swiper Container -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <!-- Các slide ảnh -->
+        <div class="swiper-slide">
+          <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728918646/1_fbgvce.jpg" alt="Image 1" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728918646/2_u2gjis.jpg" alt="Image 2" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728918646/3_sqrjyz.jpg" alt="Image 3" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728918647/4_nem01r.jpg" alt="Image 4" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728918646/1_2_yxd8g0.jpg" alt="Image 5" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728918647/6_gtficr.jpg" alt="Image 6" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728918647/7_mdwajf.jpg" alt="Image 7" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728918647/8_fcbf3q.jpg" alt="Image 8" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728918648/9_mdfw4u.jpg" alt="Image 9" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728918674/10_pcoi41.jpg" alt="Image 10" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728918674/11_hfroji.jpg" alt="Image 11" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728918674/12_khijie.jpg" alt="Image 12" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728918676/13_arzwtb.jpg" alt="Image 13" />
         </div>
       </div>
-    </section>
+
+      <!-- Pagination và navigation buttons -->
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Thêm JS Swiper từ CDN -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper('.mySwiper', {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    grabCursor: true,
+    simulateTouch: true,
+    breakpoints: {
+      640: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 40,
+      },
+    },
+  });
+</script>
+
     
   </div>
 </body>
