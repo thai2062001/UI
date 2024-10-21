@@ -69,6 +69,14 @@
       color: white;
       cursor: pointer;
     }
+    header {
+  transition: transform 0.3s ease-in-out;
+}
+
+.hide-header {
+  transform: translateY(-100%); /* Đẩy header lên trên khi ẩn */
+}
+
 
     /* Add custom styles as necessary */
   </style>
@@ -84,53 +92,72 @@
   </header>
 
   <!-- Page 1: Personal Information -->
-  <div id="page1" class="page active">
-    <div class="mx-auto mt-[10px] w-full md:w-[80%] lg:w-[60%] h-auto md:h-[500px]">
-      <div class="bg-white shadow-md rounded-lg overflow-hidden">
-        <div class="flex flex-col md:flex-row">
-          <!-- Image Section -->
-          <div class="w-full md:w-1/2">
-            <img alt="Illustration of a commercial center with people walking and cycling" class="w-full h-auto object-cover" src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728358705/IMG_8161_rexdmp.jpg"/>
+<div id="page1" class="page active">
+  <div class="mx-auto mt-[10px] w-full md:w-[80%] lg:w-[60%] h-auto md:h-[500px]">
+    <div class="bg-white shadow-md rounded-lg overflow-hidden">
+      <!-- First Section (About Me) -->
+      <div class="flex flex-col md:flex-row">
+        <div class="w-full md:w-1/2">
+          <img alt="Illustration of a commercial center with people walking and cycling" class="w-full h-auto object-cover" src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728358705/IMG_8161_rexdmp.jpg"/>
+        </div>
+        <div class="w-full md:w-1/2 p-4 md:p-8">
+          <div class="text-2xl md:text-4xl text-gray-700 font-bold mb-4">
+            01
           </div>
-    
-          <!-- Content Section -->
-          <div class="w-full md:w-1/2 p-4 md:p-8">
-            <div class="text-2xl md:text-4xl text-gray-700 font-bold mb-4">
-              01
-            </div>
-            <div class="text-md md:text-lg text-gray-700 font-bold mb-4">
-             About me
-            </div>
-            <p class="text-sm md:text-base text-gray-600 mb-4">
-              Hello! I'm Pham Thi Hai Yen, a passionate and dedicated professional with a keen interest in architecture and design. With a background that blends creativity and technical skills, I thrive on bringing innovative concepts to life. I believe that architecture is not just about buildings; it’s about creating spaces that enhance the quality of life for people.
-
-My journey began in Barranquilla, Colombia, a city steeped in history and culture. Inspired by its vibrant streets and rich architectural heritage, I developed a deep appreciation for the interplay between design and community. Through my work, I aim to capture the essence of the environments I design, creating spaces that are both functional and beautiful.
-            </p>
-    
-            <!-- Tools Used Section -->
-            <div class="text-gray-700 font-bold text-sm md:text-base mb-2">
-              Tools
-            </div>
-            <div class="flex items-center mb-2">
-              <img alt="Lightroom icon" class="w-6 h-6 md:w-8 md:h-8 mr-2" src="https://storage.googleapis.com/a1aa/image/iKZXyS3mKTbELhToUUmoeqaWmBdPKtMbME6KaEneJxn8lDnTA.jpg"/>
-              <span class="text-sm md:text-base text-gray-600">Lightroom</span>
-            </div>
-            <div class="flex items-center mb-2">
-              <img alt="Photoshop icon" class="w-6 h-6 md:w-8 md:h-8 mr-2" src="https://storage.googleapis.com/a1aa/image/CkyWiBxdjfxfU0tPShzFkr47RWTgv0ubC84uhqXUlatfLHOnA.jpg"/>
-              <span class="text-sm md:text-base text-gray-600">Photoshop</span>
-            </div>
-    
-            <!-- Additional Images -->
-            <div class="flex flex-col md:flex-row">
-              <img alt="Additional illustration of the commercial center" class="w-full md:w-1/2 h-auto object-cover mb-2 md:mb-0 md:mr-2" src="https://storage.googleapis.com/a1aa/image/uEdq4M9MXxroHpfEB1WgRXKkDmrFapDBcGr3wk4pZCWflDnTA.jpg"/>
-              <img alt="Another illustration of the commercial center" class="w-full md:w-1/2 h-auto object-cover" src="https://storage.googleapis.com/a1aa/image/dVMbOcZMBMYrL121z9u0MnjGn7RLFMAvFo4DeK64jHZBzhzJA.jpg"/>
-            </div>
+          <div class="text-md md:text-lg text-gray-700 font-bold mb-4">
+            About me
           </div>
+          <p class="text-sm md:text-base text-gray-600 mb-4">
+            Hello! I'm Pham Thi Hai Yen, a passionate and dedicated professional with a keen interest in architecture and design. With a background that blends creativity and technical skills, I thrive on bringing innovative concepts to life. I believe that architecture is not just about buildings; it’s about creating spaces that enhance the quality of life for people.
+            <br><br>
+            My journey began in Barranquilla, Colombia, a city steeped in history and culture. Inspired by its vibrant streets and rich architectural heritage, I developed a deep appreciation for the interplay between design and community. Through my work, I aim to capture the essence of the environments I design, creating spaces that are both functional and beautiful.
+          </p>
         </div>
       </div>
+      
+      <!-- Second Section (Returning to Vietnam) -->
+      <div class="flex flex-col md:flex-row mt-8">
+        <div class="w-full md:w-1/2">
+          <img alt="Illustration of a modern workspace" class="w-full h-auto object-cover" src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1729479420/14_f7aus3.png"/>
+        </div>
+        <div class="w-full md:w-1/2 p-4 md:p-8">
+          <div class="text-2xl md:text-4xl text-gray-700 font-bold mb-4">
+            02
+          </div>
+          <div class="text-md md:text-lg text-gray-700 font-bold mb-4">
+            Returning to Vietnam
+          </div>
+          <p class="text-sm md:text-base text-gray-600 mb-4">
+            Upon returning to Vietnam in 2022, I faced a pivotal decision: to become a translator for a Japanese company or pursue my passion for content. Choosing content, I joined a Vietnamese company where I honed my skills in writing for websites, social media, video scripts, and even producing internal podcasts. This experience provided me with a solid foundation in marketing.
+          </p>
+        </div>
+      </div>
+
+      <!-- Third Section (Transition to Advertising) -->
+      <div class="flex flex-col md:flex-row mt-8">
+        <div class="w-full md:w-1/2">
+          <img alt="Illustration of advertising management workspace" class="w-full h-auto object-cover" src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1729479422/15_dey4q0.png"/>
+        </div>
+        <div class="w-full md:w-1/2 p-4 md:p-8">
+          <div class="text-2xl md:text-4xl text-gray-700 font-bold mb-4">
+            03
+          </div>
+          <div class="text-md md:text-lg text-gray-700 font-bold mb-4">
+            Transition to Advertising
+          </div>
+          <p class="text-sm md:text-base text-gray-600 mb-4">
+            In 2023, eager to expand my expertise, I transitioned into advertising with GMO Internet Group (Nikko Vietnam), a leading Japanese technology firm. There, I managed advertising campaigns for major clients such as Ajinomoto, Don Quijote, and Airtrip, gaining valuable experience in performance marketing and automation tools that enhanced my productivity.
+          </p>
+          <p class="text-sm md:text-base text-gray-600 mb-4">
+            With three years of experience in the marketing industry, I am driven by the desire to explore diverse, international markets and grow into a marketing planner. I am confident that my passion, adaptability, and hands-on experience will make me a valuable asset to any organization I join.
+          </p>
+        </div>
+      </div>
+  
     </div>
-    
   </div>
+</div>
+
 
   <!-- Page 2: Skills, Experience, Clients -->
   <div id="page2" class="page">
@@ -148,6 +175,29 @@ My journey began in Barranquilla, Colombia, a city steeped in history and cultur
         <div class="bg-white p-6 md:p-8 rounded-lg shadow-lg ">
           <h2 class="text-xl md:text-2xl font-bold mb-4 text-center">Work Experience</h2>
           <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728916274/napkin-selection_5_ilwxgr.png" alt="Work Experience" class="w-full h-auto rounded-lg" />
+        </div>
+      </section>
+      <section id="customer" class="mb-8">
+        <div class="bg-white p-6 md:p-8 rounded-lg shadow-lg">
+          <h2 class="text-xl md:text-2xl font-bold mb-4 ">Clients</h2> 
+          
+          <!-- 3 logo lớn căn giữa, đều nhau trên 1 dòng, responsive cho mobile -->
+          <div class="flex justify-center items-center flex-wrap gap-4 mb-8">
+            <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728743877/z5923749441967_e6578208182cdf366f506e5f186d8f90_v4kdmi.jpg" alt="Customer Logo" class="w-[120px] sm:w-[150px] md:w-[200px] lg:w-[250px] h-auto object-contain" />
+            <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728920707/z5930373801633_fbde43dcc22103b6aece5a7a1afb593e_i0aaye.jpg" alt="Customer Logo" class="w-[120px] sm:w-[150px] md:w-[200px] lg:w-[250px] h-auto object-contain" />
+            <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1729481499/z5932248098405_4c698f099ce8f30f99d2867d2b78e086_vfg9kg.jpg" alt="Customer Logo" class="w-[120px] sm:w-[150px] md:w-[200px] lg:w-[250px] h-auto object-contain" />
+            <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1729481499/z5932251361405_f6445b89a9054374220b47072baee957_zsra2q.jpg" alt="Customer Logo" class="w-[120px] sm:w-[150px] md:w-[200px] lg:w-[250px] h-auto object-contain" />
+          </div>
+          
+          <!-- 4 logo nhỏ hơn trên 1 dòng, responsive -->
+          <div class="flex justify-between items-center flex-wrap gap-4">
+            <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728743895/z5923749442042_1ccbb4457e7a57e47ef6d08cf5b544c6_teecfz.jpg" alt="Customer Logo" class="w-[80px] sm:w-[100px] md:w-[120px] lg:w-[150px] h-auto object-contain" />
+            <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728743893/z5923749442021_92159a02991d97d683d13846de3ad265_nzht47.jpg" alt="Customer Logo" class="w-[80px] sm:w-[100px] md:w-[120px] lg:w-[150px] h-auto object-contain" />
+            <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728920707/z5930376173801_4836b573b1305bf26098a04b221ee829_itll5g.jpg" alt="Customer Logo" class="w-[80px] sm:w-[100px] md:w-[120px] lg:w-[150px] h-auto object-contain" />
+            <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728916260/z5930106784094_912c8a1b48a3683a1ad8134ff15db1e0_lpdav8.jpg" alt="Customer Logo" class="w-[80px] sm:w-[100px] md:w-[120px] lg:w-[150px] h-auto object-contain" />
+            <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/t_D/v1728743895/z5923749442025_41c81618626b2cc8512680103424282c_ukvshl.jpg" alt="Customer Logo" class="w-[80px] sm:w-[100px] md:w-[120px] lg:w-[150px] h-auto object-contain" />
+            <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728743894/z5923749442024_3b731d55df630a14c3ce3b770ce0b68e_jcj4ex.jpg" alt="Customer Logo" class="w-[80px] sm:w-[100px] md:w-[120px] lg:w-[150px] h-auto object-contain" />
+          </div>
         </div>
       </section>
 
@@ -273,8 +323,7 @@ My journey began in Barranquilla, Colombia, a city steeped in history and cultur
         },
       },
     });
-  
-  
+
   </script>
   <script>
     const swiperSlides = document.querySelectorAll('.swiper-slide');
@@ -318,6 +367,25 @@ My journey began in Barranquilla, Colombia, a city steeped in history and cultur
       modalImage.src = swiperSlides[currentIndex].querySelector('img').src;
     });
   </script>
+  <script>
+    let lastScrollTop = 0;
+    const header = document.querySelector("header");
+  
+    window.addEventListener("scroll", function () {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  
+      if (scrollTop > lastScrollTop) {
+        // Kéo xuống -> ẩn header
+        header.classList.add("hide-header");
+      } else {
+        // Kéo lên -> hiện header
+        header.classList.remove("hide-header");
+      }
+  
+      lastScrollTop = scrollTop;
+    });
+  </script>
+  
   
 </body>
 </html>
