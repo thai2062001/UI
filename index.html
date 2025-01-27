@@ -4,6 +4,7 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <title>Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/antd/4.24.3/antd.min.css" />
   <link rel="icon" href="https://img.icons8.com/?size=100&id=0f68z5tUzSsC&format=png&color=000000" type="image/png" />
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
@@ -85,158 +86,260 @@
 <body class="bg-gray-200">
 
   <!-- Navigation Buttons -->
-  <header class="bg-black text-white p-4 sticky top-0 z-50">
+  <!-- <header class="bg-black text-white p-4 sticky top-0 z-50">
     <nav class="container mx-auto flex justify-between">
       <button id="show-page1" class="hover:underline font-bold"> Information</button>
       <button id="show-page2" class="hover:underline font-bold"> Skills & Experience</button>
     </nav>
-  </header>
+  </header> -->
+<!-- Thêm Select vào Header -->
+<header class="bg-black text-white p-4 sticky top-0 z-50">
+  <nav class="container mx-auto flex justify-between">
+    <!-- Section: Information -->
+    <div class="flex items-center space-x-4">
+      <button id="show-page1" class="hover:underline font-bold" data-translate="information">Information</button>
+    </div>
+
+    <!-- Section: Experience + Language Selector -->
+    <div class="flex items-center space-x-4">
+      <button id="show-page2" class="hover:underline font-bold" data-translate="skillsExperience">Skills & Experience</button>
+      <select id="languageSelector" class="text-black p-2 rounded">
+        <option value="en">English</option>
+        <option value="jp">日本語</option>
+      </select>
+    </div>
+  </nav>
+</header>
 
   <!-- Page 1: Personal Information -->
-<div id="page1" class="page active">
-  <div class="mx-auto mt-[10px] w-full md:w-[80%] lg:w-[60%] h-auto md:h-[500px]">
-    <div class="bg-white shadow-md rounded-lg overflow-hidden">
-      <!-- First Section (About Me) -->
-      <div class="flex flex-col md:flex-row">
-        <div class="w-full md:w-1/2">
-          <img alt="Illustration of a commercial center with people walking and cycling" class="w-full h-auto object-cover" src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728358705/IMG_8161_rexdmp.jpg" />
-        </div>
-        <div class="w-full md:w-1/2 p-4 md:p-8">
-          <div class="text-2xl md:text-4xl text-gray-700 font-bold mb-4">
-            01
+  <div id="page1" class="page active">
+    <div class="mx-auto mt-[10px] w-full md:w-[80%] lg:w-[60%] h-auto md:h-[500px]">
+      <div class="bg-white shadow-md rounded-lg overflow-hidden">
+        <!-- First Section (About Me) -->
+        <div class="flex flex-col md:flex-row">
+          <div class="w-full md:w-1/2">
+            <img alt="Illustration of a commercial center with people walking and cycling" class="w-full h-auto object-cover" src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728358705/IMG_8161_rexdmp.jpg" />
           </div>
-          <div class="text-md md:text-lg text-gray-700 font-bold mb-4">
-            About me
-          </div>
-          <p class="text-sm md:text-base text-gray-600 mb-4">
-            Hello, my name is Pham Thi Hai Yen, and I am a marketing professional with a focus on content creation and advertising. After earning my degree in Business Administration in 2018, I pursued further studies in Japan to deepen my expertise in the service industry. Although the pandemic disrupted my plans for hands-on internships, it gave me an unexpected opportunity to explore my passion for writing through blogging, which ultimately led me to a career in content creation.
-          </p>
-          
-          <div class="mt-6">
-            <p class="text-sm md:text-base text-gray-600 mb-2">
-              <span class="font-bold">Phone Number:</span> 032.836.1826
+          <div class="w-full md:w-1/2 p-4 md:p-8">
+            <div class="text-2xl md:text-4xl text-gray-700 font-bold mb-4">01</div>
+            <div class="text-md md:text-lg text-gray-700 font-bold mb-4" data-translate="aboutMe">
+              About me
+            </div>
+            <p class="text-sm md:text-base text-gray-600 mb-4" data-translate="aboutMeContent">
+             
             </p>
-            <p class="text-sm md:text-base text-gray-600 mb-2">
-              <span class="font-bold">Email:</span> haiyenpham1795@gmail.com
+            <p class="text-sm md:text-base text-gray-600 mb-4" data-translate="aboutMeContent2">
+              
             </p>
-            <p class="text-sm md:text-base text-gray-600 mb-4">
-              <span class="font-bold">Address:</span> Dong Thanh - Hoc Mon
-            </p>
-            
-            <div class="flex space-x-4">
-              <a href="https://www.linkedin.com/in/haiyen-pham/" target="_blank" rel="noopener noreferrer">
-                <img src="https://img.icons8.com/?size=100&id=xuvGCOXi8Wyg&format=png&color=000000" alt="Linkedin" class="w-8 h-8" />
-              </a>
-              <a href="https://canarybookreview.blogspot.com/" target="_blank" rel="noopener noreferrer">
-                <img src="https://img.icons8.com/?size=100&id=N0dK8npzoMqo&format=png&color=000000" alt="Blog" class="w-8 h-8" />
-              </a>
+            <div class="mt-6">
+              <p class="text-sm md:text-base text-gray-600 mb-2">
+                <span class="font-bold" data-translate="phoneNumber">Phone Number:</span> 032.836.1826
+              </p>
+              <p class="text-sm md:text-base text-gray-600 mb-2">
+                <span class="font-bold" data-translate="email">Email:</span> haiyenpham1795@gmail.com
+              </p>
+              <p class="text-sm md:text-base text-gray-600 mb-4">
+                <span class="font-bold" data-translate="address">Address:</span> Dong Thanh - Hoc Mon
+              </p>
             </div>
           </div>
         </div>
-      </div>
-      
-      
-      <!-- Second Section (Returning to Vietnam) -->
-      <div class="flex flex-col md:flex-row mt-8">
-        <div class="w-full md:w-1/2">
-          <img alt="Illustration of a modern workspace" class="w-full h-auto object-cover" src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1729479420/14_f7aus3.png"/>
-        </div>
-        <div class="w-full md:w-1/2 p-4 md:p-8">
-          <div class="text-2xl md:text-4xl text-gray-700 font-bold mb-4">
-            02
-          </div>
-          <div class="text-md md:text-lg text-gray-700 font-bold mb-4">
-            Returning to Vietnam
-          </div>
-          <p class="text-sm md:text-base text-gray-600 mb-4">
-            Upon returning to Vietnam in 2022, I faced a pivotal decision: to become a translator for a Japanese company or pursue my passion for content. Choosing content, I joined a Vietnamese company where I honed my skills in writing for websites, social media, video scripts, and even producing internal podcasts. This experience provided me with a solid foundation in marketing.
-          </p>
-        </div>
-      </div>
-
-      <!-- Third Section (Transition to Advertising) -->
-      <div class="flex flex-col md:flex-row mt-8">
-        <div class="w-full md:w-1/2">
-          <img alt="Illustration of advertising management workspace" class="w-full h-auto object-cover" src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1729479422/15_dey4q0.png"/>
-        </div>
-        <div class="w-full md:w-1/2 p-4 md:p-8">
-          <div class="text-2xl md:text-4xl text-gray-700 font-bold mb-4">
-            03
-          </div>
-          <div class="text-md md:text-lg text-gray-700 font-bold mb-4">
-            Transition to Advertising
-          </div>
-          <p class="text-sm md:text-base text-gray-600 mb-4">
-            In 2023, eager to expand my expertise, I transitioned into advertising with GMO Internet Group (Nikko Vietnam), a leading Japanese technology firm. There, I managed advertising campaigns for major clients such as Ajinomoto, Don Quijote, and Airtrip, gaining valuable experience in performance marketing and automation tools that enhanced my productivity.
-          </p>
-
-        </div>
         
-      </div>
-         <div class="flex flex-col md:flex-row ">
-
-        <div class="w-full md:w-full p-4 md:p-4">
-          <div class="text-2xl md:text-4xl text-gray-700 font-bold mb-4">
-            04
+        <!-- Second Section (Returning to Vietnam) -->
+        <div class="flex flex-col md:flex-row mt-8">
+          <div class="w-full md:w-1/2">
+            <img alt="Illustration of a modern workspace" class="w-full h-auto object-cover" src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1729479420/14_f7aus3.png"/>
           </div>
-          <div class="text-md md:text-lg text-gray-700 font-bold mb-4">
-            Future Aspirations
+          <div class="w-full md:w-1/2 p-4 md:p-8">
+            <div class="text-2xl md:text-4xl text-gray-700 font-bold mb-4">02</div>
+            <div class="text-md md:text-lg text-gray-700 font-bold mb-4" data-translate="returningToVietnam">
+              Returning to Vietnam
+            </div>
+            <p class="text-sm md:text-base text-gray-600 mb-4" data-translate="returningToVietnamContent">
+              Upon returning to Vietnam in 2022, I faced a pivotal decision: to become a translator for a Japanese company or pursue my passion for content. Choosing content, I joined a Vietnamese company where I honed my skills in writing for websites, social media, video scripts, and even producing internal podcasts. This experience provided me with a solid foundation in marketing.
+            </p>
           </div>
-          <p class="text-sm md:text-base text-gray-600 mb-4">
-            With three years of experience in the marketing industry, I am driven by the desire to explore diverse, international markets and grow into a marketing planner. I am confident that my passion, adaptability, and hands-on experience will make me a valuable asset to any organization I join.
-          </p>
         </div>
-  </div>
+  
+        <!-- Third Section (Transition to Advertising) -->
+        <div class="flex flex-col md:flex-row mt-8">
+          <div class="w-full md:w-1/2">
+            <img alt="Illustration of advertising management workspace" class="w-full h-auto object-cover" src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1729479422/15_dey4q0.png"/>
+          </div>
+          <div class="w-full md:w-1/2 p-4 md:p-8">
+            <div class="text-2xl md:text-4xl text-gray-700 font-bold mb-4">03</div>
+            <div class="text-md md:text-lg text-gray-700 font-bold mb-4" data-translate="transitionToAdvertising">
+              Transition to Advertising
+            </div>
+            <p class="text-sm md:text-base text-gray-600 mb-4" data-translate="transitionToAdvertisingContent">
+              In 2023, eager to expand my expertise, I transitioned into advertising with GMO Internet Group (Nikko Vietnam), a leading Japanese technology firm. There, I managed advertising campaigns for major clients such as Ajinomoto, Don Quijote, and Airtrip, gaining valuable experience in performance marketing and automation tools that enhanced my productivity.
+            </p>
+          </div>
+        </div>
+  
+        <!-- Fourth Section (Future Aspirations) -->
+        <div class="flex flex-col md:flex-row">
+          <div class="w-full md:w-full p-4 md:p-4">
+            <div class="text-2xl md:text-4xl text-gray-700 font-bold mb-4">04</div>
+            <div class="text-md md:text-lg text-gray-700 font-bold mb-4" data-translate="futureAspirations">
+              Future Aspirations
+            </div>
+            <p class="text-sm md:text-base text-gray-600 mb-4" data-translate="futureAspirationsContent"></p>
+            <p class="text-sm md:text-base text-gray-600 mb-4" data-translate="futureAspirationsContent2"></p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
-
+  
 
   <!-- Page 2: Skills, Experience, Clients -->
   <div id="page2" class="page">
     <div class="container mx-auto p-4 mt-8">
+      <!-- Title -->
+      <div class="text-center mb-8">
+        <h2 class="text-2xl md:text-3xl font-bold text-black" data-translate="skills">Skills</h2>
+        <p class="text-gray-500" data-translate="skillsOverview">Overview of my skill</p>
+      </div>
+  
       <!-- Skills Section -->
-      <section id="skills" class="mb-8">
-        <div class="bg-white p-6 md:p-8 rounded-lg shadow-lg">
-          <h2 class="text-xl md:text-2xl font-bold mb-4 text-center">Skills</h2>
-          <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728916385/napkin-selection_6_ofkayz.png" alt="Skills" class="w-full h-auto rounded-lg" />
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Data Management Card -->
+        <div class="ant-card shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl hover:bg-blue-50" style="border-radius: 8px;">
+          <div class="ant-card-body">
+            <h3 class="text-xl font-bold text-blue-600 mb-2" data-translate="dataManagement">Data Management</h3>
+            <ul class="list-disc pl-4 text-gray-600">
+              <li data-translate="excel">Excel</li>
+              <li data-translate="googleSheets">Google Sheets</li>
+              <li data-translate="reportOptimization">Report Optimization</li>
+              <li data-translate="dashboardDesign">Dashboard Design</li>
+            </ul>
+          </div>
         </div>
-      </section>
-
+  
+        <!-- Automation Tools Card -->
+        <div class="ant-card shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl hover:bg-green-50" style="border-radius: 8px;">
+          <div class="ant-card-body">
+            <h3 class="text-xl font-bold text-green-600 mb-2" data-translate="automationTools">Automation Tools</h3>
+            <ul class="list-disc pl-4 text-gray-600">
+              <li data-translate="sql">SQL</li>
+              <li data-translate="powerQuery">Power Query</li>
+              <li data-translate="vba">VBA</li>
+              <li data-translate="googleAppScripts">Google App Scripts</li>
+            </ul>
+          </div>
+        </div>
+  
+        <!-- Languages Card -->
+        <div class="ant-card shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl hover:bg-purple-50" style="border-radius: 8px;">
+          <div class="ant-card-body">
+            <h3 class="text-xl font-bold text-purple-600 mb-2" data-translate="languages">Languages</h3>
+            <ul class="list-disc pl-4 text-gray-600">
+              <li data-translate="japanese">Japanese</li>
+              <li data-translate="english">English</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  
       <!-- Work Experience Section -->
       <section id="work-experience">
-        <div class="bg-white p-6 md:p-8 rounded-lg shadow-lg ">
-          <h2 class="text-xl md:text-2xl font-bold mb-4 text-center">Work Experience</h2>
-          <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1729483437/napkin-selection_7_m3uxgn.png" alt="Work Experience" class="w-full h-auto rounded-lg" />
+        <div class="container mx-auto p-4 mt-8">
+          <!-- Title -->
+          <div class="text-center mb-8">
+            <h2 class="text-2xl md:text-3xl font-bold text-black" data-translate="workExperience">Work Experience</h2>
+            <p class="text-gray-500" data-translate="workExperienceOverview">Overview of my professional experiences</p>
+          </div>
+  
+          <!-- Work Experience Cards -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- GMO Nikko Vietnam Card -->
+            <div class="ant-card shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl" style="border-radius: 8px;">
+              <div class="ant-card-body">
+                <h3 class="text-lg font-bold text-blue-600 mb-2" data-translate="gmoNikko">GMO Nikko Vietnam</h3>
+                <p class="text-gray-500 text-sm mb-4" data-translate="gmoNikkoDuration">2023 - Present</p>
+                <ul class="list-disc pl-4 text-gray-600 space-y-1">
+                  <li data-translate="gmoNikkoTask1">Internal Communication</li>
+                  <li data-translate="gmoNikkoTask2">Ad Campaign Execution</li>
+                  <li data-translate="gmoNikkoTask3">Reporting and Automation</li>
+                  <li data-translate="gmoNikkoTask4">Work Efficiency Optimization</li>
+                </ul>
+              </div>
+            </div>
+  
+            <!-- Nha Sach Service Joint Stock Company Card -->
+            <div class="ant-card shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl" style="border-radius: 8px;">
+              <div class="ant-card-body">
+                <h3 class="text-lg font-bold text-green-600 mb-2" data-translate="nhaSach">Nha Sach Service Joint Stock Company</h3>
+                <p class="text-gray-500 text-sm mb-4" data-translate="nhaSachDuration">2022 - 2023</p>
+                <ul class="list-disc pl-4 text-gray-600 space-y-1">
+                  <li data-translate="nhaSachTask1">SEO Web Writing Strategy</li>
+                  <li data-translate="nhaSachTask2">Planning Topic Research and Style Guide Development</li>
+                  <li data-translate="nhaSachTask3">Internal PR Podcast Development</li>
+                  <li data-translate="nhaSachTask4">Content Promotion</li>
+                  <li data-translate="nhaSachTask5">Storytelling</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <section id="customer" class="mb-8">
+        <!-- Title nằm ngoài khung -->
+        <div class="text-center mb-4">
+          <h2 class="text-2xl md:text-3xl font-bold text-black" data-translate="clients">Clients</h2>
+        </div>
+      
+        <!-- Logo Cards Section -->
         <div class="bg-white p-6 md:p-8 rounded-lg shadow-lg">
-          <h2 class="text-xl md:text-2xl font-bold text-center mb-4 ">Clients</h2> 
-          
-          <!-- 3 logo lớn căn giữa, đều nhau trên 1 dòng, responsive cho mobile -->
-          <div class="flex justify-center items-center flex-wrap gap-4 mb-8">
-            <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728743877/z5923749441967_e6578208182cdf366f506e5f186d8f90_v4kdmi.jpg" alt="Customer Logo" class="w-[120px] sm:w-[150px] md:w-[200px] lg:w-[250px] h-auto object-contain" />
-            <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728920707/z5930373801633_fbde43dcc22103b6aece5a7a1afb593e_i0aaye.jpg" alt="Customer Logo" class="w-[120px] sm:w-[150px] md:w-[200px] lg:w-[250px] h-auto object-contain" />
-            <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1729481499/z5932248098405_4c698f099ce8f30f99d2867d2b78e086_vfg9kg.jpg" alt="Customer Logo" class="w-[120px] sm:w-[150px] md:w-[200px] lg:w-[250px] h-auto object-contain" />
-            <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1729481499/z5932251361405_f6445b89a9054374220b47072baee957_zsra2q.jpg" alt="Customer Logo" class="w-[120px] sm:w-[150px] md:w-[200px] lg:w-[250px] h-auto object-contain" />
-          </div>
-          
-          <!-- 4 logo nhỏ hơn trên 1 dòng, responsive -->
-          <div class="flex justify-between items-center flex-wrap gap-4">
-            <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728743895/z5923749442042_1ccbb4457e7a57e47ef6d08cf5b544c6_teecfz.jpg" alt="Customer Logo" class="w-[80px] sm:w-[100px] md:w-[120px] lg:w-[150px] h-auto object-contain" />
-            <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728743893/z5923749442021_92159a02991d97d683d13846de3ad265_nzht47.jpg" alt="Customer Logo" class="w-[80px] sm:w-[100px] md:w-[120px] lg:w-[150px] h-auto object-contain" />
-            <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728920707/z5930376173801_4836b573b1305bf26098a04b221ee829_itll5g.jpg" alt="Customer Logo" class="w-[80px] sm:w-[100px] md:w-[120px] lg:w-[150px] h-auto object-contain" />
-            <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728916260/z5930106784094_912c8a1b48a3683a1ad8134ff15db1e0_lpdav8.jpg" alt="Customer Logo" class="w-[80px] sm:w-[100px] md:w-[120px] lg:w-[150px] h-auto object-contain" />
-            <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/t_D/v1728743895/z5923749442025_41c81618626b2cc8512680103424282c_ukvshl.jpg" alt="Customer Logo" class="w-[80px] sm:w-[100px] md:w-[120px] lg:w-[150px] h-auto object-contain" />
-            <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728743894/z5923749442024_3b731d55df630a14c3ce3b770ce0b68e_jcj4ex.jpg" alt="Customer Logo" class="w-[80px] sm:w-[100px] md:w-[120px] lg:w-[150px] h-auto object-contain" />
+          <!-- Logo Cards Container -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+            <!-- Logo Card 1 -->
+            <div class="rounded-md shadow hover:shadow-lg transition-transform transform hover:scale-105 flex justify-center items-center h-32">
+              <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728743877/z5923749441967_e6578208182cdf366f506e5f186d8f90_v4kdmi.jpg" alt="Don Quijote" class="max-h-full max-w-full object-contain">
+            </div>
+        
+            <!-- Logo Card 2 -->
+            <div class="rounded-md shadow hover:shadow-lg transition-transform transform hover:scale-105 flex justify-center items-center h-32">
+              <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728920707/z5930373801633_fbde43dcc22103b6aece5a7a1afb593e_i0aaye.jpg" alt="AirTrip" class="max-h-full max-w-full object-contain">
+            </div>
+        
+            <!-- Logo Card 3 -->
+            <div class="rounded-md shadow hover:shadow-lg transition-transform transform hover:scale-105 flex justify-center items-center h-32">
+              <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1729481499/z5932248098405_4c698f099ce8f30f99d2867d2b78e086_vfg9kg.jpg" alt="Ajinomoto" class="max-h-full max-w-full object-contain">
+            </div>
+        
+            <!-- Logo Card 4 -->
+            <div class="rounded-md shadow hover:shadow-lg transition-transform transform hover:scale-105 flex justify-center items-center h-32">
+              <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728920707/z5930376173801_4836b573b1305bf26098a04b221ee829_itll5g.jpg" alt="Phuong Nam" class="max-h-full max-w-full object-contain">
+            </div>
+        
+            <!-- Logo Card 5 -->
+            <div class="rounded-md shadow hover:shadow-lg transition-transform transform hover:scale-105 flex justify-center items-center h-32">
+              <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728743895/z5923749442042_1ccbb4457e7a57e47ef6d08cf5b544c6_teecfz.jpg" alt="GreenTECCONS" class="max-h-full max-w-[70%] object-contain">
+            </div>
+        
+            <!-- Logo Card 6 -->
+            <div class="rounded-md shadow hover:shadow-lg transition-transform transform hover:scale-105 flex justify-center items-center h-32">
+              <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728743893/z5923749442021_92159a02991d97d683d13846de3ad265_nzht47.jpg" alt="Ghien An" class="max-h-full max-w-[70%] object-contain">
+            </div>
+        
+            <!-- Logo Card 7 -->
+            <div class="rounded-md shadow hover:shadow-lg transition-transform transform hover:scale-105 flex justify-center items-center h-32">
+              <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1737976028/23-Asahi_sp55f3.png" alt="Asahi" class="max-h-full max-w-[50%] object-contain">
+            </div>
+        
+            <!-- Logo Card 8 -->
+            <div class="rounded-md shadow hover:shadow-lg transition-transform transform hover:scale-105 flex justify-center items-center h-32">
+              <img src="https://res.cloudinary.com/dpdzbuiml/image/upload/v1728916260/z5930106784094_912c8a1b48a3683a1ad8134ff15db1e0_lpdav8.jpg" alt="Covermark" class="max-h-full max-w-full object-contain">
+            </div>
           </div>
         </div>
-      </section>
-
+        
+      
       <section id="projects" class="mb-8">
         <div class="bg-white p-6 md:p-8 rounded-lg shadow-lg ">
-          <h2 class="text-xl md:text-2xl font-bold mb-4 text-center">Projects</h2> 
+          <h2 class="text-xl md:text-2xl font-bold mb-4 text-center " data-translate="project">Projects</h2> 
       
           <div class="swiper mySwiper">
             <div class="swiper-wrapper">
@@ -289,11 +392,6 @@
         </div>
       </section>
       
-      <!-- Modal for full-screen image
-      <div class="modal" id="imageModal">
-        <span class="close" id="closeModal">&times;</span>
-        <img id="modalImage" src="" alt="Modal Image" />
-      </div> -->
       <div class="modal" id="imageModal">
         <span class="close" id="closeModal">&times;</span>
         <img id="modalImage" src="" alt="Large Image" />
@@ -358,6 +456,7 @@
     });
 
   </script>
+  
   <script>
     const swiperSlides = document.querySelectorAll('.swiper-slide');
     const modal = document.getElementById('imageModal');
@@ -418,6 +517,135 @@
       lastScrollTop = scrollTop;
     });
   </script>
+  <script>
+const translations = {
+  en: {
+    // Existing translations... information: "Information",
+    information: "Infomation",
+    skillsExperience: "Skills & Experience",
+    aboutMe: "About Me",
+    aboutMeContent: "Hello, my name is Pham Thi Hai Yen, and I specialize in content creation and advertising. After earning my degree in Business Administration in 2018, I continued my studies in Japan to deepen my knowledge of the service industry and develop professional skills in an international environment.",
+    aboutMeContent2:"When the pandemic disrupted my plans for hands-on internships, it led me to explore a new path. I discovered my passion for writing through blogging, which became the foundation for my career in content creation. This experience helped me realize my love for creativity and my potential to grow in the marketing field",
+    returningToVietnam: "Returning to Vietnam",
+    returningToVietnamContent: "After returning to Vietnam in 2022, I joined a dynamic Vietnamese company where I quickly immersed myself in crafting engaging content across websites, social media, and video scripts, while also producing internal podcasts. This role allowed me to sharpen my creative and strategic thinking, laying a strong foundation for my journey in the marketing industry.",
+    transitionToAdvertising: "Transition to Advertising",
+    transitionToAdvertisingContent: "In 2023, eager to expand my expertise, I transitioned into advertising with GMO Internet Group (Nikko Vietnam), a leading Japanese technology firm. There, I managed advertising campaigns for major clients such as Ajinomoto, Don Quijote, and Airtrip, gaining valuable experience in performance marketing and automation tools that enhanced my productivity.",
+    futureAspirations: "Future Aspirations",
+    futureAspirationsContent: "With three years of experience in marketing, I am determined to take the next step in my career as a Marketing Leader. In my next role, I aim to lead advertising projects, optimize team workflows, and deliver impactful campaigns that drive measurable results. This transition will allow me to further develop my leadership skills, enhance strategic thinking, and prepare for more significant challenges in the future.",
+    futureAspirationsContent2:"Looking ahead, my long-term goal is to become a Marketing Manager, where I can design comprehensive strategies, manage cross-functional teams, and contribute to the sustainable growth of the organization. I believe that my passion, determination, and steadily growing expertise will enable me to create meaningful value and drive success for any company I work with.",
+    phoneNumber: "Phone Number:",
+    email: "Email:",
+    address: "Address:",
+    //page 2
+    skills: "Skills",
+    skillsOverview: "Overview of my skill",
+    dataManagement: "Data Management",
+    automationTools: "Automation Tools",
+    languages: "Languages",
+    excel: "Excel",
+    googleSheets: "Google Sheets",
+    reportOptimization: "Report Optimization",
+    dashboardDesign: "Dashboard Design",
+    sql: "SQL",
+    powerQuery: "Power Query",
+    vba: "VBA",
+    googleAppScripts: "Google App Scripts",
+    japanese: "Japanese",
+    english: "English",
+    workExperience: "Work Experience",
+    workExperienceOverview: "Overview of my professional experiences",
+    gmoNikko: "GMO Nikko Vietnam",
+    gmoNikkoDuration: "2023 - Present",
+    gmoNikkoTask1: "Internal Communication",
+    gmoNikkoTask2: "Ad Campaign Execution",
+    gmoNikkoTask3: "Reporting and Automation",
+    gmoNikkoTask4: "Work Efficiency Optimization",
+    nhaSach: "Nha Sach Service Joint Stock Company",
+    nhaSachDuration: "2022 - 2023",
+    nhaSachTask1: "SEO Web Writing Strategy",
+    nhaSachTask2: "Planning Topic Research and Style Guide Development",
+    nhaSachTask3: "Internal PR Podcast Development",
+    nhaSachTask4: "Content Promotion",
+    nhaSachTask5: "Storytelling",
+    clients: "Clients",
+    project:"Project"
+  },
+  jp: {
+    information: "情報",
+    skillsExperience: "スキルと経験",
+    aboutMe: "自己紹介",
+    aboutMeContent: "こんにちは、私はファム・ティ・ハイ・イエンと申します。コンテンツ制作と広告を専門としております。2018年に経営学を学び卒業後、日本でサービス業に関する知識を深め、国際的な環境で専門的なスキルを磨きました。",
+    aboutMeContent2:"パンデミックの影響で実務経験を積む予定が変更となりましたが、それが私に新たな道を見つけるきっかけとなりました。ブログを通じてライティングへの情熱を発見し、これが私のコンテンツ制作のキャリアの基盤となりました。この経験を通じて、私は創造的な表現への愛情と、マーケティング分野で成長できる可能性を実感しました。",
+    returningToVietnam: "ベトナムに戻る",
+    returningToVietnamContent: "2022年にベトナムに戻り、活気に満ちたベトナムの企業に参加し、ウェブサイト、ソーシャルメディア、ビデオスクリプトのコンテンツ制作に迅速に取り組み、さらに社内ポッドキャストの制作も担当しました。この役割を通じて、創造的な思考や戦略的な考え方を磨き、マーケティング業界でのキャリアにおける強固な基盤を築くことができました。",
+    transitionToAdvertising: "広告への移行",
+    transitionToAdvertisingContent: "2023年には、専門知識を広げたいという意欲から、GMO Internet Group（ニッコーベトナム）という日本の大手技術企業で広告の分野に移行しました。そこでは、AjinomotoやDon Quijote、Airtripなどの主要クライアントの広告キャンペーンを管理し、パフォーマンスマーケティングや生産性向上のための自動化ツールで貴重な経験を得ました。",
+    futureAspirations: "将来の抱負",
+    futureAspirationsContent: "マーケティング業界での3年間の経験を活かし、次のキャリアステップとしてマーケティングリーダーを目指しています。次の役職では、広告プロジェクトをリードし、チームのワークフローを最適化し、測定可能な結果を生み出すキャンペーンを実施することを目指します。この転換は、リーダーシップスキルをさらに発展させ、戦略的な思考を強化し、将来的にさらに大きな課題に挑戦する準備をするための絶好の機会です。",
+    futureAspirationsContent2:"長期的には、マーケティングマネージャーとして、包括的な戦略を設計し、横断的なチームを管理し、組織の持続的な成長に貢献することが目標です。私の情熱、決意、そして着実に成長する専門知識が、どの企業でも価値を創出し、成功へと導くと確信しています。",
+    phoneNumber: "電話番号:",
+    email: "メールアドレス:",
+    address: "住所:",
+    // Japanese translations...
+    skills: "スキル",
+    skillsOverview: "私のスキルの概要",
+    dataManagement: "データ管理",
+    automationTools: "自動化ツール",
+    languages: "言語",
+    excel: "エクセル",
+    googleSheets: "Google スプレッドシート",
+    reportOptimization: "レポート最適化",
+    dashboardDesign: "ダッシュボード設計",
+    sql: "SQL",
+    powerQuery: "パワークエリ",
+    vba: "VBA",
+    googleAppScripts: "Google アプリスクリプト",
+    japanese: "日本語",
+    english: "英語",
+    workExperience: "職務経験",
+    workExperienceOverview: "私の職務経験の概要",
+    gmoNikko: "GMO ニッコーベトナム",
+    gmoNikkoDuration: "2023年〜現在",
+    gmoNikkoTask1: "内部コミュニケーション",
+    gmoNikkoTask2: "広告キャンペーンの実行",
+    gmoNikkoTask3: "レポートと自動化",
+    gmoNikkoTask4: "作業効率の最適化",
+    nhaSach: "Nha Sach サービス株式会社",
+    nhaSachDuration: "2022年〜2023年",
+    nhaSachTask1: "SEOウェブライティング戦略",
+    nhaSachTask2: "トピック研究とスタイルガイド開発",
+    nhaSachTask3: "内部PRポッドキャスト開発",
+    nhaSachTask4: "コンテンツプロモーション",
+    nhaSachTask5: "ストーリーテリング",
+    clients: "クライアント",
+    project:"プロジェクト"
+  },
+};
+
+  
+    function changeLanguage(lang) {
+      // Lấy tất cả các phần tử cần thay đổi
+      document.querySelector("#show-page1").textContent = translations[lang].information;
+      document.querySelector("#show-page2").textContent = translations[lang].skillsExperience;
+  
+      document.querySelectorAll("[data-translate]").forEach((element) => {
+        const key = element.dataset.translate;
+        if (translations[lang][key]) {
+          element.textContent = translations[lang][key];
+        }
+      });
+    }
+  
+    // Thay đổi ngôn ngữ khi người dùng chọn
+    document.querySelector("#languageSelector").addEventListener("change", (event) => {
+      const selectedLang = event.target.value;
+      changeLanguage(selectedLang);
+    });
+  
+    // Thiết lập ngôn ngữ mặc định
+    changeLanguage("en");
+  </script>
+  
   
   
 </body>
